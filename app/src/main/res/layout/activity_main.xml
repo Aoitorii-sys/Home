@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F1EA">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="#0D1B2A"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/hashbox"
+            android:contentDescription="@string/hashbox_logo_description" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brand_tagline"
+                android:textColor="#B8C4D9"
+                android:textSize="11sp"
+                android:letterSpacing="0.05" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cart_icon"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:text="@string/cart_icon"
+            android:textSize="22sp"
+            android:background="#1B4965"
+            android:contentDescription="@string/cart_description" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/hero_card"
+        android:layout_width="0dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardBackgroundColor="#1B4965"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="3dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingStart="22dp"
+            android:paddingEnd="22dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_collection"
+                android:textColor="#7DD3FC"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/hero_title"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/hero_subtitle"
+                android:textColor="#D7E4F2"
+                android:textSize="12sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/superButton"
+                android:layout_width="120dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="9dp"
+                android:text="@string/explore"
+                android:textColor="#0D1B2A"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:backgroundTint="#FFFFFF"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/featured_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/featured_shirts"
+        android:textColor="#0D1B2A"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/hero_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/featured_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/featured_subtitle"
+        android:textColor="#65758B"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/featured_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/product1"
+        android:layout_width="0dp"
+        android:layout_height="260dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="6dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="3dp"
+        app:layout_constraintTop_toBottomOf="@id/featured_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/product2"
+        app:layout_constraintWidth_percent="0.30">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="145dp">
+
+                <ImageView
+                    android:id="@+id/shirt_image1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/shirt1"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/classic_tee" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_margin="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:gravity="center"
+                    android:text="@string/new_badge"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:background="#3FA9F5" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="8dp"
+                android:text="@string/classic_tee"
+                android:textColor="#0D1B2A"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="2dp"
+                android:text="@string/price_classic"
+                android:textColor="#3FA9F5"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_buy1"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="7dp"
+                android:text="@string/add_to_cart"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:backgroundTint="#0D1B2A"
+                app:cornerRadius="9dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/product2"
+        android:layout_width="0dp"
+        android:layout_height="260dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="3dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="3dp"
+        app:layout_constraintTop_toBottomOf="@id/featured_subtitle"
+        app:layout_constraintStart_toEndOf="@id/product1"
+        app:layout_constraintEnd_toStartOf="@id/product3"
+        app:layout_constraintWidth_percent="0.30">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="145dp">
+
+                <ImageView
+                    android:id="@+id/shirt_image2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/shirt2"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/urban_fit" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_margin="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:gravity="center"
+                    android:text="@string/best_badge"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:background="#0D1B2A" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="8dp"
+                android:text="@string/urban_fit"
+                android:textColor="#0D1B2A"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="2dp"
+                android:text="@string/price_urban"
+                android:textColor="#3FA9F5"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_buy2"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="7dp"
+                android:text="@string/add_to_cart"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:backgroundTint="#0D1B2A"
+                app:cornerRadius="9dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/product3"
+        android:layout_width="0dp"
+        android:layout_height="260dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="3dp"
+        app:layout_constraintTop_toBottomOf="@id/featured_subtitle"
+        app:layout_constraintStart_toEndOf="@id/product2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.30">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="145dp">
+
+                <ImageView
+                    android:id="@+id/shirt_image3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/shirt3"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/premium_tee" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_margin="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:gravity="center"
+                    android:text="@string/sale_badge"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:background="#3FA9F5" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="8dp"
+                android:text="@string/premium_tee"
+                android:textColor="#0D1B2A"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="2dp"
+                android:text="@string/price_premium"
+                android:textColor="#3FA9F5"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_buy3"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="7dp"
+                android:text="@string/add_to_cart"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:backgroundTint="#0D1B2A"
+                app:cornerRadius="9dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_shop_now"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/shop_now"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.04"
+        app:backgroundTint="#3FA9F5"
+        app:cornerRadius="16dp"
+        app:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

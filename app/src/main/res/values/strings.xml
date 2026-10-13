@@ -1,0 +1,34 @@
+<resources>
+
+    <string name="app_name">HASHBOX</string>
+
+    <string name="hashbox_logo_description">Hashbox logo</string>
+    <string name="brand_tagline">STYLE • QUALITY • YOU</string>
+
+    <string name="cart_icon">🛒</string>
+    <string name="cart_description">Shopping cart</string>
+
+    <string name="new_collection">NEW COLLECTION</string>
+    <string name="hero_title">Find your everyday style.</string>
+    <string name="hero_subtitle">Simple shirts. Better looks.</string>
+    <string name="explore">EXPLORE</string>
+
+    <string name="featured_shirts">Featured Shirts</string>
+    <string name="featured_subtitle">Our latest styles, selected for you.</string>
+
+    <string name="classic_tee">Classic Tee</string>
+    <string name="urban_fit">Urban Fit</string>
+    <string name="premium_tee">Premium Tee</string>
+
+    <string name="new_badge">NEW</string>
+    <string name="best_badge">BEST</string>
+    <string name="sale_badge">SALE</string>
+
+    <string name="price_classic">₱499</string>
+    <string name="price_urban">₱599</string>
+    <string name="price_premium">₱699</string>
+
+    <string name="add_to_cart">ADD TO CART</string>
+    <string name="shop_now">SHOP NOW →</string>
+
+</resources>
